@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Car Dealership Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application for managing a car dealership, built using React, Node.js, and MongoDB. The system allows administrators to manage car listings (add, edit, delete) and users to view available cars.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Authentication & Authorization
+  - Secure login/logout system
+  - Role-based access control (Admin, User)
+- Car Management
+  - Add new cars (Admin only)
+  - Edit or delete existing cars (Admin only)
+  - View available cars (All users)
+- Database
+  - MongoDB with proper indexing for optimized queries
+  - RESTful API for CRUD operations
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React, Bootstrap
+- Backend: Node.js, Express.js
+- Database: MongoDB (NoSQL)
+- Authentication: JWT (JSON Web Tokens)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation & Setup
 
-### `npm test`
+### 1. Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+git clone https://github.com/Urchellox/Car-Dealership.git
+cd your-repository
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 3. Start the Development Server
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The frontend will be available at [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+cd backend
+npm install
+node server.js
 
-## Learn More
+- The backend will run on [http://localhost:3001](http://localhost:3001).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 5. MongoDB Setup
+Ensure that MongoDB is running locally or use a cloud MongoDB provider (e.g., MongoDB Atlas). Update the connection string in backend/config/db.js:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/car_dealership', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Endpoints
 
-### Analyzing the Bundle Size
+- GET /cars - Fetch all available cars
+- POST /cars - Add a new car (Admin only)
+- PUT /cars/:id - Edit car details (Admin only)
+- DELETE /cars/:id - Remove a car from the listing (Admin only)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+To build the project for production, run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm run build
 
-### Advanced Configuration
+Then, deploy the build/ folder to a hosting service like Vercel, Netlify, or AWS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Screenshots
 
-### Deployment
+_Add relevant UI screenshots here_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributors
+- Your Name - Developer
+- Teammate Name - Developer
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.
