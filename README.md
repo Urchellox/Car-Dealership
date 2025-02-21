@@ -76,11 +76,13 @@ Then, deploy the build/ folder to a hosting service like Vercel, Netlify, or AWS
 
 ## Screenshots
 
-_Add relevant UI screenshots here_
+![image](https://github.com/user-attachments/assets/1262f13d-346a-45ee-9ee0-49c9638c1f22)
+![image](https://github.com/user-attachments/assets/cb980685-4b87-46c8-a51a-aca9bc3a23be)
+
 
 ## Contributors
-- Your Name - Developer
-- Teammate Name - Developer
+- Nurdaulet Nurbapa - Developer
+- Yuriy Mikhnevich - Developer
 
 ## License
 This project is licensed under the MIT License.
